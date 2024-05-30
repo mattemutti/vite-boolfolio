@@ -12,9 +12,10 @@ export default {
 <template>
 
 	<div class="container">
-		<div class="row">
-			<div class="row">
-				<div class="title-car">
+		<div class="row col">
+			<div class="">
+
+				<div class="title-card">
 					{{ project.title }}
 				</div>
 				<img :src="project.cover_image" alt="">
@@ -30,10 +31,14 @@ export default {
 				<div class="card-body">
 					Type: {{ project.type.name }}
 				</div>
+				<div class="card-body">
+					Data: {{ project.create_data }}
+				</div>
 				Tech
-				<span class="card-body px-2" v-for="technology in project.technologies">
+				<span class="card-body" v-for="technology in project.technologies">
 					{{ technology.name }}
 				</span>
+
 			</div>
 		</div>
 	</div>
