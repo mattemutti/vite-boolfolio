@@ -50,23 +50,21 @@ export default {
 
 <template>
 
-  <h1>{{ message }}</h1>
 
+  <header>Testa</header>
 
   <div class="container">
     <div class="row">
       <div class="col-4" v-for="project in projects.data">
         <div class="card">
-
-
-
           <ProjectCard :project="project" :key="project.id" v-for="project in projects.data" />
-
-
         </div>
       </div>
     </div>
   </div>
+
+
+  <footer>piede</footer>
 
 </template>
 
