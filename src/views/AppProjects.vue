@@ -1,12 +1,13 @@
 <script>
 import ProjectCard from '../components/ProjectCard.vue';
+import AppBanner from '../components/AppBanner.vue';
 import axios from 'axios';
 
 export default {
 	name: 'AppProjects',
-
 	components: {
-		ProjectCard
+		ProjectCard,
+		AppBanner,
 	},
 
 	data() {
@@ -38,8 +39,10 @@ export default {
 
 </script>
 <template>
-
 	<div class="container">
+		<AppBanner title="Matte's Projects" lead-text="Read our projects" call-to-action="Find more about us"
+			call-to-action-url="about"></AppBanner>
+
 		<div class="row">
 
 			<ProjectCard :project="project" :key="project.id" v-for="project in projects.data"

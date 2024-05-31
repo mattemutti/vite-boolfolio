@@ -33,7 +33,7 @@ export default {
     </div>
   </main>
 
-  <footer class="text-center shadow-lg p-3 mb-5 bg-body-tertiary rounded">piede</footer>
+  <!-- <footer class="text-center shadow-lg p-3 mb-5 bg-body-tertiary rounded">piede</footer> -->
 
 </template>
 
