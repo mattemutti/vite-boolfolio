@@ -23,7 +23,7 @@ export default {
 <template>
 
 
-	<div class="col">
+	<div class="col-lg-3 col-md-4 col-sm-6">
 		<div class="card">
 
 			<div class="title-card">
