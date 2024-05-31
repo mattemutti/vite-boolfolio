@@ -1,0 +1,49 @@
+<script>
+export default {
+  name: 'AppHeader',
+  data() {
+    return {
+      menu: [
+        {
+          'text': 'Home',
+          'route': 'home'
+        },
+        {
+          'text': 'About',
+          'route': 'about'
+        },
+        {
+          'text': 'Projects',
+          'route': 'projects'
+        },
+        {
+          'text': 'Blogs',
+          'route': 'blogs'
+        },
+        {
+          'text': 'Contacts',
+          'route': 'contacts'
+        },
+      ]
+    }
+  }
+}
+
+</script>
+
+<template>
+  <header>
+    <div class="d-flex justify-content-between px-2 py-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+
+      <div class="">Logo</div>
+      <div class="right-menu">
+        <router-link :to="{ name: item.route }" v-for="item in menu " class="px-2 text-decoration-none text-dark">{{
+          item.text }}</router-link>
+
+      </div>
+    </div>
+  </header>
+
+</template>
+
+<style></style>

@@ -1,15 +1,11 @@
 <script>
-
-
+import AppHeader from './components/AppHeader.vue';
 
 export default {
-
   name: 'App',
   components: {
-
+    AppHeader
   },
-
-
 
   data() {
     return {
@@ -26,36 +22,23 @@ export default {
 </script>
 
 <template>
-  <header>
-    <div class="d-flex justify-content-between">
 
-      <div>Logo</div>
-      <div class="right-menu">
-        <router-link :to="{ name: 'home' }">Home</router-link>
-        <router-link :to="{ name: 'about' }">About</router-link>
-        <router-link :to="{ name: 'projects' }">Projects</router-link>
-        <router-link :to="{ name: 'blogs' }">Blogs</router-link>
-        <router-link :to="{ name: 'contacts' }">Contacts</router-link>
-      </div>
-    </div>
-  </header>
+  <AppHeader />
+
   <main>
     <div class="container">
 
-
       <RouterView />
-
 
     </div>
   </main>
 
-
-  <footer>piede</footer>
+  <footer class="text-center shadow-lg p-3 mb-5 bg-body-tertiary rounded">piede</footer>
 
 </template>
 
 <style>
-* {
+/* * {
   border: 1px dashed black;
-}
+} */
 </style>
