@@ -1,65 +1,53 @@
 <script>
-import ProjectCard from './components/ProjectCard.vue';
-import axios from 'axios';
+
 
 
 export default {
 
   name: 'App',
   components: {
-    ProjectCard
+
   },
 
 
 
   data() {
     return {
-      message: 'By',
-      base_api_url: 'http://127.0.0.1:8000',
-      base_project_url: '/api/projects',
-      projects: [],
-      loading: true,
-
 
     }
   },
   methods: {
 
-
-    callApi(url) {
-
-      axios.get(url)
-        .then(response => {
-          console.log(response);
-          this.projects = response.data.projects;
-          this.loading = false;
-        })
-        .catch(err => {
-          console.errol(err);
-        })
-    }
   },
   mounted() {
-
-    let url = this.base_api_url + this.base_project_url;
-    this.callApi(url);
 
   }
 }
 </script>
 
 <template>
+  <header>
+    <div class="d-flex justify-content-between">
+
+      <div>Logo</div>
+      <div class="right-menu">
+        <router-link :to="{ name: 'home' }">Home</router-link>
+        <router-link :to="{ name: 'about' }">About</router-link>
+        <router-link :to="{ name: 'projects' }">Projects</router-link>
+        <router-link :to="{ name: 'blogs' }">Blogs</router-link>
+        <router-link :to="{ name: 'contacts' }">Contacts</router-link>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
 
 
-  <header>Testa</header>
+      <RouterView />
 
-  <div class="container">
-    <div class="row">
-
-      <ProjectCard :project="project" :key="project.id" v-for="project in projects.data" :base_api_url="base_api_url" />
 
     </div>
-  </div>
+  </main>
 
 
   <footer>piede</footer>
