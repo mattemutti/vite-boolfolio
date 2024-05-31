@@ -12,18 +12,18 @@ export default {
 </script>
 <template>
 
-	<div class="container">
-		<div class="row col">
-			<div class="card">
 
-				<div class="title-card">
-					{{ project.title }}
-				</div>
-				<img :src="project.cover_image" alt="" class="py-4">
-				<div class="card-body">
+	<div class="col">
+		<div class="card">
+
+			<div class="title-card">
+				{{ project.title }}
+			</div>
+			<img :src="project.cover_image" alt="" class="py-4">
+			<!-- <div class="card-body">
 					Description: {{ project.description }}
-				</div>
-				<div class="card-body">
+				</div> -->
+			<!-- <div class="card-body">
 					Video: {{ project.video }}
 				</div>
 				<div class="card-body">
@@ -38,10 +38,9 @@ export default {
 				Tech
 				<span class="card-body" v-for="technology in project.technologies">
 					{{ technology.name }}
-				</span>
-
-			</div>
+				</span> -->
 		</div>
 	</div>
+
 </template>
 <style></style>
