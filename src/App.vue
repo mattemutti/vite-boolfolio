@@ -58,6 +58,7 @@ export default {
       <div class="">
         <ProjectCard :project="project" :key="project.id" v-for="project in projects.data"
           :base_api_url="base_api_url" />
+
       </div>
     </div>
   </div>

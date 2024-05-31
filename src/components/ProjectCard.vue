@@ -6,8 +6,18 @@ export default {
 
 	props: {
 		project: Object,
+		base_api_url: String,
+
 	},
-	base_api_url: String,
+
+	data() {
+		return {
+
+
+
+
+		}
+	},
 }
 </script>
 <template>
@@ -19,7 +29,7 @@ export default {
 			<div class="title-card">
 				{{ project.title }}
 			</div>
-			<img :src="project.cover_image" alt="" class="py-4">
+			<img :src="base_api_url + '/storage/' + project.cover_image" alt="" class="py-4">
 			<!-- <div class="card-body">
 					Description: {{ project.description }}
 				</div> -->
