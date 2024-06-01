@@ -5,6 +5,7 @@ import AppAbout from "./views/AppAbout.vue";
 import AppProjects from "./views/AppProjects.vue";
 import AppBlogs from "./views/AppBlogs.vue";
 import AppContacts from "./views/AppContacts.vue";
+import AppSocial from "./views/AppSocial.vue";
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -33,6 +34,11 @@ const router = createRouter({
 			path: '/contacts',
 			name: 'contacts',
 			component: AppContacts,
+		},
+		{
+			path: '/social',
+			name: 'social',
+			component: AppSocial,
 		},
 	]
 })
