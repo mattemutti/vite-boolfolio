@@ -29,7 +29,22 @@ export default {
 				.catch(err => {
 					console.errol(err);
 				})
-		}
+		},
+
+		nextPage(url) {
+			//console.log(url);
+			this.callApi(url);
+		},
+
+		prevPage(url) {
+			//console.log(url);
+			this.callApi(url);
+		},
+
+		goTo(page) {
+			const url = this.base_api_url + this.base_project_url + `?page=${page}`
+			this.callApi(url);
+		},
 	},
 	mounted() {
 		let url = this.base_api_url + this.base_project_url;
@@ -43,12 +58,40 @@ export default {
 		<AppBanner title="Matte's Projects" lead-text="Read our projects" call-to-action="Find more about us"
 			call-to-action-url="about"></AppBanner>
 
-		<div class="row">
-
+		<div class="row" v-if="!loading">
 			<ProjectCard :project="project" :key="project.id" v-for="project in projects.data"
 				:base_api_url="base_api_url" />
-
 		</div>
+		<div class="row" v-else>
+			<div class="col">
+				Loading...
+			</div>
+		</div>
+
+
+		<!-- Paginate -->
+		<nav aria-label="Page navigation">
+			<ul class="pagination d-flex justify-content-between">
+				<li class="page-item text_dark" v-show="projects.prev_page_url"
+					@click="prevPage(projects.prev_page_url)">
+					<button class="page-link text_dark" aria-label="Previous">
+						<span class="text-dark" aria-hidden="true">&laquo;</span>
+					</button>
+				</li>
+
+				<li class="page-item" :class="{ 'active': page == projects.current_page }" :aria-current="page"
+					v-for="page in projects.last_page" @click="goTo(page)">
+					<button class="page-link text-dark">{{ page }}</button>
+				</li>
+
+				<li class="page-item" v-show="projects.next_page_url">
+					<button class="page-link" aria-label="Next" @click="nextPage(projects.next_page_url)">
+						<span class="text-dark" aria-hidden="true">&raquo;</span>
+					</button>
+				</li>
+			</ul>
+		</nav>
+
 	</div>
 </template>
 <style></style>
