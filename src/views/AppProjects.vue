@@ -45,6 +45,10 @@ export default {
 			const url = this.base_api_url + this.base_project_url + `?page=${page}`
 			this.callApi(url);
 		},
+
+		showProject(id) {
+
+		}
 	},
 	mounted() {
 		let url = this.base_api_url + this.base_project_url;

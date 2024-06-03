@@ -24,12 +24,12 @@ export default {
 
 
 	<div class="col-lg-3 col-md-4 col-sm-6 g-4 py-4">
-		<div class="card p-2">
+		<div class="card">
 
-			<div class="title-card ">
-				{{ project.title }}
-			</div>
 			<img :src="base_api_url + '/storage/' + project.cover_image" alt="" class="py-4">
+			<div class="title-card text-center">
+				<h4>{{ project.title }}</h4>
+			</div>
 			<!-- <div class="card-body">
 					Description: {{ project.description }}
 				</div> -->
@@ -54,4 +54,8 @@ export default {
 
 
 </template>
-<style></style>
+<style>
+img {
+	max-width: 100%;
+}
+</style>
