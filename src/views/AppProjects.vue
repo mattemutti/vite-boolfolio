@@ -16,6 +16,7 @@ export default {
 			base_project_url: '/api/projects',
 			projects: [],
 			loading: true,
+			id: [],
 		}
 	},
 	methods: {
@@ -62,11 +63,17 @@ export default {
 		<AppBanner title="Matte's Projects" lead-text="Read my projects" call-to-action="Find more about me"
 			call-to-action-url="about"></AppBanner>
 
+
 		<div class="row" v-if="!loading">
-			<ProjectCard :project="project" :key="project.id" v-for="project in projects.data"
-				:base_api_url="base_api_url" />
+			<!-- <router-link :to="{ name: 'show' }">link</router-link> -->
+			<ProjectCard :project="project" :key="project.id" v-for="project in  projects.data "
+				:base_api_url="base_api_url">
+
+
+			</ProjectCard>
+
 		</div>
-		<div class="row" v-else>
+		<div class=" row" v-else>
 			<div class="col">
 				Loading...
 			</div>
@@ -84,7 +91,7 @@ export default {
 				</li>
 
 				<li class="page-item" :class="{ 'active': page == projects.current_page }" :aria-current="page"
-					v-for="page in projects.last_page" @click="goTo(page)">
+					v-for=" page  in  projects.last_page " @click="goTo(page)">
 					<button class="page-link text-dark">{{ page }}</button>
 				</li>
 

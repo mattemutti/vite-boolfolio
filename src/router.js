@@ -43,6 +43,7 @@ const router = createRouter({
 		},
 		{
 			path: '/show/:id',
+			name: 'show',
 			component: AppShowProject,
 		},
 	]
