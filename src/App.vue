@@ -31,7 +31,8 @@ export default {
           <span>Junior Full Stack Web Developer</span>
         </p>
       </div>
-      
+      <div class="box_top"></div>
+
       <RouterView />
 
     </main>

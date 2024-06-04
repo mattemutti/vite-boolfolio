@@ -23,12 +23,13 @@ export default {
 		callApi(url) {
 			axios.get(url)
 				.then(response => {
+
 					console.log(response);
 					this.projects = response.data.projects;
 					this.loading = false;
 				})
 				.catch(err => {
-					console.errol(err);
+					console.error(err);
 				})
 		},
 
@@ -65,9 +66,8 @@ export default {
 
 
 		<div class="row" v-if="!loading">
-			<ProjectCard :project="project" :key="project.id" v-for="project in  projects.data "
+			<ProjectCard v-for="project in  projects.data" :project="project" :key="project.id"
 				:base_api_url="base_api_url">
-
 
 			</ProjectCard>
 

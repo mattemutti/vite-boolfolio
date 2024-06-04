@@ -12,9 +12,9 @@ export default {
 </script>
 <template>
 
-	<div class="container">
+	<div class="container txt_color text-center">
 
-
+		Hi
 
 
 

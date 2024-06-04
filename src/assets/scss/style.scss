@@ -56,9 +56,9 @@
 		overflow-y: auto;
 		position: relative;
 		// background-image: url(../../../public/img/);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+		// background-repeat: no-repeat;
+		// background-position: center;
+		// background-size: cover;
 
 
 
@@ -67,8 +67,27 @@
 			color: var(--text--primary);
 			padding-left: 1.5rem;
 			padding-top: 1rem;
+			position: fixed;
 		}
 
+
+		.box_top {
+			margin-top: 6rem;
+		}
+
+		.title_show {
+			font-size: 40px;
+		}
+
+		.title_show:hover {
+			font-size: 45px;
+			color: rgb(49, 48, 48);
+
+		}
+
+		// .title_projects:hover{
+		// 	color: rgb(49, 48, 48);
+		// }
 
 
 	}
