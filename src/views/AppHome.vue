@@ -12,9 +12,9 @@ export default {
 </script>
 <template>
 
-	<div class="container txt_color text-center">
+	<div class="container text-center p-5">
 
-		Hi
+		Hi, my Photo
 
 
 

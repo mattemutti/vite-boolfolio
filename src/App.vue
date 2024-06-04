@@ -36,6 +36,9 @@ export default {
       <RouterView />
 
     </main>
+    <div class="p-2 text-end" style="font-size: 12px;">
+      Copyrigth @ Matteo Mutti 2024
+    </div>
   </div>
 </template>
 

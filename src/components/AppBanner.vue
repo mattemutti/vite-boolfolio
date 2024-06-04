@@ -14,7 +14,7 @@ export default {
 <template>
 
 	<div class="banner py-5">
-		<div class="container txt_color">
+		<div class="container ">
 			<h1>{{ title }}</h1>
 			<p>
 				{{ leadText }}
