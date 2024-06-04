@@ -17,8 +17,8 @@ export default {
           'route': 'projects'
         },
         {
-          'text': 'Blogs',
-          'route': 'blogs'
+          'text': 'Blog',
+          'route': 'blog'
         },
         {
           'text': 'Contacts',
@@ -33,7 +33,7 @@ export default {
 
 <template>
   <header>
-    <div class="d-flex justify-content-between px-2 py-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+    <div class="d-flex justify-content-between pb-2">
 
       <div>
         <router-link :to="{ name: 'social' }" class="text-decoration-none text-dark">Logo</router-link>

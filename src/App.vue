@@ -22,19 +22,20 @@ export default {
 </script>
 
 <template>
+  <div class="bg_external">
+    <AppHeader />
+    <main class="squared-border">
 
-  <AppHeader />
+      <h1> Matteo Mutti </h1>
+      <div class="container">
 
-  <main>
-    <div class="container">
+        <RouterView />
 
-      <RouterView />
+      </div>
 
-    </div>
-  </main>
 
-  <!-- <footer class="text-center shadow-lg p-3 mb-5 bg-body-tertiary rounded">piede</footer> -->
-
+    </main>
+  </div>
 </template>
 
 <style>
