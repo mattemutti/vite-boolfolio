@@ -52,6 +52,7 @@ export default {
 		}
 	},
 	mounted() {
+		console.log(this.base_api_url, this.base_project_url);
 		let url = this.base_api_url + this.base_project_url;
 		this.callApi(url);
 	}
@@ -65,7 +66,6 @@ export default {
 
 
 		<div class="row" v-if="!loading">
-			<!-- <router-link :to="{ name: 'show' }">link</router-link> -->
 			<ProjectCard :project="project" :key="project.id" v-for="project in  projects.data "
 				:base_api_url="base_api_url">
 

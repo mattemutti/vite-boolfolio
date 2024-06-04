@@ -1,0 +1,80 @@
+<script>
+import ProjectCard from '../components/ProjectCard.vue';
+import AppBanner from '../components/AppBanner.vue';
+import axios from 'axios';
+
+export default {
+	name: 'SingleProject',
+	components: {
+		ProjectCard,
+		AppBanner,
+	},
+
+	data() {
+		return {
+			base_api_url: 'http://127.0.0.1:8000',
+			base_project_url: '/api/projects',
+			project: '',
+			loading: true,
+		}
+	},
+	methods: {
+		callApi(url) {
+			axios.get(url)
+				.then(response => {
+					console.log(response);
+					if (response.data.success) {
+						console.log(response.data.response);
+						this.project = response.data.response;
+						this.loading = false;
+					} else {
+						404
+					}
+
+				})
+				.catch(err => {
+					console.error(err);
+				})
+		},
+
+
+
+	},
+	mounted() {
+		console.log(this.base_api_url, this.base_project_url, `/${this.$route.params.id}`);
+		let url = this.base_api_url + this.base_project_url + `/${this.$route.params.id}`;
+		this.callApi(url);
+
+	}
+}
+</script>
+<template>
+
+	<div>
+		<!-- The current route is accessible as $route in the template -->
+		<!-- {{ $route.params.id }} -->
+
+
+		<div class="title-card text-center">
+			<h4>{{ project.title }}</h4>
+		</div>
+		<img :src="base_api_url + '/storage/' + project.cover_image" alt="" class="py-4">
+		<div>
+			{{ project.description }}
+		</div>
+		<div>
+			{{ project.code }}
+			<div>
+				{{ project.repo }}
+			</div>
+		</div>
+		<div>
+			{{ project.technologies }}
+		</div>
+		<div>
+			{{ project.type }}
+		</div>
+	</div>
+
+</template>
+<style></style>

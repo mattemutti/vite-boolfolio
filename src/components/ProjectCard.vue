@@ -26,7 +26,7 @@ export default {
 	<div class="col-lg-3 col-md-4 col-sm-6 g-4 py-4">
 		<div class="card">
 
-			<router-link :to="{ name: 'show', params: { id: project.slug } }" class="
+			<router-link :to="{ name: 'show', params: { id: project.id } }" class="
 			text-decoration-none text-dark">
 				<img :src="base_api_url + '/storage/' + project.cover_image" alt="" class="py-4">
 				<div class="title-card text-center">

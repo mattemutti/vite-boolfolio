@@ -6,7 +6,7 @@ import AppProjects from "./views/AppProjects.vue";
 import AppBlogs from "./views/AppBlogs.vue";
 import AppContacts from "./views/AppContacts.vue";
 import AppSocial from "./views/AppSocial.vue";
-import AppShowProject from "./views/AppShowProject.vue";
+import SingleProject from "./views/SingleProject.vue";
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -44,9 +44,8 @@ const router = createRouter({
 		{
 			path: '/show/:id',
 			name: 'show',
-			component: AppShowProject,
+			component: SingleProject,
 		},
 	]
 })
-
 export default router;
