@@ -61,8 +61,7 @@ export default {
 </script>
 <template>
 	<div class="container">
-		<AppBanner title="Matte's Projects" lead-text="Read my projects" call-to-action="Find more about me"
-			call-to-action-url="about"></AppBanner>
+
 
 
 		<div class="row" v-if="!loading">

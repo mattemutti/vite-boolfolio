@@ -23,43 +23,23 @@ export default {
 <template>
 
 
-	<div class="col-lg-3 col-md-4 col-sm-6 g-4 py-4">
-		<div class="card">
+	<div class="txt_color">
 
-			<router-link :to="{ name: 'show', params: { id: project.id } }" class="
-			text-decoration-none text-dark">
-				<img :src="base_api_url + '/storage/' + project.cover_image" alt="" class="py-4">
-				<div class="title-card text-center">
-					<h4>{{ project.title }}</h4>
-				</div>
-			</router-link>
+		<router-link :to="{ name: 'show', params: { id: project.id } }" class="
+			text-decoration-none txt_color">
+			<div class="txt_color text-center py-4">
+				<h4>{{ project.title }}</h4> <span> / Type: {{ project.type.name }}</span>
+			</div>
+		</router-link>
 
-			<!-- <div class="card-body">
-					Description: {{ project.description }}
-				</div> -->
-			<!-- <div class="card-body">
-					Video: {{ project.video }}
-				</div>
-				<div class="card-body">
-					Repo: {{ project.repo }}
-				</div>
-				<div class="card-body">
-					Type: {{ project.type.name }}
-				</div>
-				<div class="card-body">
-					Data: {{ project.create_data }}
-				</div>
-				Tech
-				<span class="card-body" v-for="technology in project.technologies">
-					{{ technology.name }}
-				</span> -->
-		</div>
+
+
+
+		{{ project.create_data }}
+
+
 	</div>
 
 
 </template>
-<style>
-img {
-	max-width: 100%;
-}
-</style>
+<style></style>

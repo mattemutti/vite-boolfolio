@@ -2,9 +2,15 @@
 @use './partials/variables' as *;
 
 
-// * {
-// 	border: 1px dashed white;
-// }
+* {
+	//border: 1px dashed white;
+	font-family: caecilia-sans-text, sans-serif;
+	font-weight: 100;
+	font-style: normal;
+	font-variation-settings: "SEIS" 0, "wght" 300;
+
+}
+
 
 
 
@@ -12,13 +18,22 @@
 
 :root {
 	--bg-primary: rgb(17, 16, 16);
-
+	--text--primary: rgb(236, 227, 227);
 	--Logo-prymary: ;
 
 }
 
 
 /* Utilities */
+
+.txt_color {
+	color: var(--text--primary);
+}
+
+
+
+
+/* Main */
 
 .bg_external {
 
@@ -39,6 +54,21 @@
 		height: 100%;
 		overflow: hidden;
 		overflow-y: auto;
+		position: relative;
+		// background-image: url(../../../public/img/);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+
+
+
+		.title_home {
+			color: var(--text--primary);
+			padding-left: 1.5rem;
+			padding-top: 1rem;
+		}
+
 
 
 	}

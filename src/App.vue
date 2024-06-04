@@ -25,14 +25,14 @@ export default {
   <div class="bg_external">
     <AppHeader />
     <main class="squared-border">
-
-      <h1> Matteo Mutti </h1>
-      <div class="container">
-
-        <RouterView />
-
+      <div class="title_home">
+        <h1> Matteo Mutti </h1>
+        <p>
+          <span>Junior Full Stack Web Developer</span>
+        </p>
       </div>
-
+      
+      <RouterView />
 
     </main>
   </div>
