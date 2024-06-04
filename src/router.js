@@ -7,6 +7,7 @@ import AppBlogs from "./views/AppBlogs.vue";
 import AppContacts from "./views/AppContacts.vue";
 import AppSocial from "./views/AppSocial.vue";
 import SingleProject from "./views/SingleProject.vue";
+import NotFound from "./views/NotFound.vue";
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -46,6 +47,11 @@ const router = createRouter({
 			name: 'show',
 			component: SingleProject,
 		},
+		{
+			path: '/:pathMatch(.*)*',
+			name: 'not-found',
+			component: NotFound,
+		}
 	]
 })
 export default router;

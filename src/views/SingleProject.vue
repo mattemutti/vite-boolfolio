@@ -28,7 +28,7 @@ export default {
 						this.project = response.data.response;
 						this.loading = false;
 					} else {
-						404
+						this.$router.push({ name: 'not-found' })
 					}
 
 				})
