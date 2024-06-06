@@ -200,7 +200,7 @@
 
 	.squared-border {
 		background-color: var(--bg-primary);
-		padding: 0.50rem;
+		//padding: 0.50rem;
 		border: 1.5px solid grey;
 		width: 100%;
 		height: 100%;
@@ -208,10 +208,7 @@
 		overflow-y: auto;
 		z-index: 1;
 		position: relative;
-		// background-image: url(../../../public/img/);
-		// background-repeat: no-repeat;
-		// background-position: center;
-		// background-size: cover;
+
 
 		.squared-border::-webkit-scrollbar {
 			display: none;
@@ -222,6 +219,20 @@
 			padding-left: 1.5rem;
 			padding-top: 1rem;
 			position: fixed;
+		}
+
+		.bg_home {
+			//width: 100vw;
+			height: 100vh;
+			background-image: url(../../../public/img/bg-home.jpg);
+			//padding-top: 10%;
+			//margin-left: -1rem;
+			//background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			opacity: 60%;
+
+
 		}
 
 		.box_top {

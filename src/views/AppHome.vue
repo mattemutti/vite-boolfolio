@@ -22,9 +22,9 @@ export default {
 </script>
 <template>
 
-	<div id="ripple" :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" class="container text-center p-5 movearea">
-
-		Hi, my Photo
+	<div class="container text-center p-5 movearea">
+		<div class="bg_home">
+		</div>
 
 
 

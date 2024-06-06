@@ -28,16 +28,18 @@ export default {
   </div>
   <div class="bg_external a_home">
     <AppHeader />
-    <main class="squared-border">
+    <main class="squared-border bg_home">
       <div class="title_home">
         <h1> Matteo Mutti </h1>
         <p>
           <span>Junior Full Stack Web Developer</span>
         </p>
       </div>
+      <!-- <img class="bg_home" src="../public/img/bg-home.jpg" alt=""> -->
       <div class="box_top"></div>
 
       <RouterView />
+
 
     </main>
     <div class="p-2 text-end" style="font-size: 12px;">

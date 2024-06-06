@@ -55,26 +55,31 @@ export default {
 		<!-- {{ $route.params.id }} -->
 
 
-		<div class="title-card text-center">
-			<h4>{{ project.title }}</h4>
+		<div class="text-end">
+			<h2 class="">{{ project.title }}</h2>
 		</div>
 		<div class="text-center">
 			<img :src="base_api_url + '/storage/' + project.cover_image" alt="" class="py-4">
 		</div>
-		<div class="text-end">
+		<div class="text-end p-4">
 			{{ project.description }}
 		</div>
-		<div class="text-end">
-			{{ project.code }}
+
+		<div class="d-flex justify-content-between p-2">
+			<div class="">
+				{{ project.code }}
+			</div>
 			<div>
 				{{ project.repo }}
 			</div>
 		</div>
-		<div class="text-end">
-			{{ project.technologies }}
+		<div class="" v-if="project.technologies">
+			<div class="text-center" v-for="tech in project.technologies">
+				{{ tech.name }}
+			</div>
 		</div>
-		<div class="text-end">
-			{{ project.type }}
+		<div class="text-end" v-if="project.type">
+			{{ project.type.name }}
 		</div>
 	</div>
 
