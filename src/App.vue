@@ -22,7 +22,11 @@ export default {
 </script>
 
 <template>
-  <div class="bg_external">
+  <div class="intro_site">
+    <h2 class="t1_intro">Matteo Mutti </h2>
+    <h1 class="px-2 t2_intro">| Portfolio</h1>
+  </div>
+  <div class="bg_external a_home">
     <AppHeader />
     <main class="squared-border">
       <div class="title_home">

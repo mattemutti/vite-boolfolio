@@ -8,6 +8,7 @@
 	font-style: normal;
 	font-variation-settings: "SEIS" 0, "wght" 300;
 	color: var(--text--primary);
+	cursor: nw-resize;
 }
 
 ::-webkit-scrollbar {
@@ -25,8 +26,163 @@
 
 /* Utilities */
 
+.intro_site {
+	background-color: var(--bg-primary);
+	position: absolute;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+	animation-name: a_intro;
+	animation-duration: 0.5s;
+	animation-delay: 2.5s;
+	animation-fill-mode: forwards;
+
+	.t1_intro {
+		animation-name: t1_a_intro;
+		animation-duration: 1s;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	.t2_intro {
+		animation-name: t2_a_intro;
+		animation-duration: 0.5s;
+		animation-delay: 1.5s;
+		animation-fill-mode: forwards;
+	}
+}
+
+@keyframes a_intro {
+	from {
+		display: block;
+	}
+
+	to {
+		display: none;
+	}
+}
+
+@keyframes t1_a_intro {
+	0% {
+		opacity: 1;
+	}
+
+	10% {
+		opacity: 0.9;
+	}
+
+	20% {
+		opacity: 0.8;
+	}
+
+	30% {
+		opacity: 0.7;
+	}
+
+	40% {
+		opacity: 0.6;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	60% {
+		opacity: 0.4;
+	}
+
+	70% {
+		opacity: 0.3;
+	}
+
+	80% {
+		opacity: 0.2;
+	}
+
+	90% {
+		opacity: 0.1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes t2_a_intro {
+	0% {
+		opacity: 1;
+	}
+
+	10% {
+		opacity: 0.9;
+	}
+
+	20% {
+		opacity: 0.8;
+	}
+
+	30% {
+		opacity: 0.7;
+	}
+
+	40% {
+		opacity: 0.6;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	60% {
+		opacity: 0.4;
+	}
+
+	70% {
+		opacity: 0.3;
+	}
+
+	80% {
+		opacity: 0.2;
+	}
+
+	90% {
+		opacity: 0.1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.a_home {
+	animation-name: a_home;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes a_home {
+	from {
+		opacity: 0.75;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 .txt_color {
 	color: var(--text--primary);
+}
+
+.active_menu {
+	color: grey;
+	box-shadow: 1px 5px 1em 1px #dc3545;
+	border-bottom: 1px solid grey;
 }
 
 
@@ -38,9 +194,6 @@
 	padding-bottom: 5rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
-
-
-
 	background-color: var(--bg-primary);
 	width: 100vw;
 	height: 100vh;
@@ -54,7 +207,6 @@
 		overflow: hidden;
 		overflow-y: auto;
 		z-index: 1;
-
 		position: relative;
 		// background-image: url(../../../public/img/);
 		// background-repeat: no-repeat;
@@ -79,18 +231,12 @@
 		.title_show {
 			font-size: 40px;
 			transition: font-size 0.4s;
-
 		}
 
 		.title_show:hover {
 			font-size: 45px;
 			color: rgb(49, 48, 48);
-
 		}
-
-		// .title_projects:hover{
-		// 	color: rgb(49, 48, 48);
-		// }
 
 		.input_box {
 			color: var(--text--primary);

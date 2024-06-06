@@ -36,11 +36,16 @@ export default {
     <div class="d-flex justify-content-between pb-2">
 
       <div>
-        <router-link :to="{ name: 'social' }" class="text-decoration-none txt_color">Logo</router-link>
+        <router-link :to="{ name: 'social' }" class="text-decoration-none txt_color fs-5">MM</router-link>
       </div>
-      <div class="right-menu">
-        <router-link :to="{ name: item.route }" v-for="item in menu " class="px-2 text-decoration-none txt_color">{{
-          item.text }}</router-link>
+      <div class="right-menu d-flex ">
+        <router-link :to="{ name: item.route }" v-for="item in    menu    " class="px-2 text-decoration-none txt_color">
+          <div>
+            {{ item.text }}
+            <div class="line_header" :class="{ 'active_menu': this.$route.path == '/' + item.route }"></div>
+          </div>
+
+        </router-link>
 
       </div>
     </div>

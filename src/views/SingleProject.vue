@@ -58,20 +58,22 @@ export default {
 		<div class="title-card text-center">
 			<h4>{{ project.title }}</h4>
 		</div>
-		<img :src="base_api_url + '/storage/' + project.cover_image" alt="" class="py-4">
-		<div>
+		<div class="text-center">
+			<img :src="base_api_url + '/storage/' + project.cover_image" alt="" class="py-4">
+		</div>
+		<div class="text-end">
 			{{ project.description }}
 		</div>
-		<div>
+		<div class="text-end">
 			{{ project.code }}
 			<div>
 				{{ project.repo }}
 			</div>
 		</div>
-		<div>
+		<div class="text-end">
 			{{ project.technologies }}
 		</div>
-		<div>
+		<div class="text-end">
 			{{ project.type }}
 		</div>
 	</div>
