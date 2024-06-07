@@ -22,13 +22,11 @@ export default {
 </script>
 <template>
 
-	<div class="container text-center p-5 movearea">
-		<div class="bg_home">
-		</div>
-
-
-
-
+	<div class="bg_home">
 	</div>
+
+
+
+
 </template>
 <style></style>
