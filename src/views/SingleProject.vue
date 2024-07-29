@@ -55,7 +55,7 @@ export default {
 		<!-- {{ $route.params.id }} -->
 
 
-		<div class="text-end">
+		<div class="text-center">
 			<h2 class="">{{ project.title }}</h2>
 		</div>
 		<div class="text-center">
@@ -65,7 +65,7 @@ export default {
 			{{ project.description }}
 		</div>
 
-		<div class="d-flex justify-content-between p-2">
+		<div class="d-flex justify-content-between p-4">
 			<div class="">
 				{{ project.code }}
 			</div>
@@ -73,12 +73,12 @@ export default {
 				{{ project.repo }}
 			</div>
 		</div>
-		<div class="" v-if="project.technologies">
+		<div class="p-4" v-if="project.technologies">
 			<div class="text-center" v-for="tech in project.technologies">
 				{{ tech.name }}
 			</div>
 		</div>
-		<div class="text-end" v-if="project.type">
+		<div class="text-end p-4" v-if="project.type">
 			{{ project.type.name }}
 		</div>
 	</div>

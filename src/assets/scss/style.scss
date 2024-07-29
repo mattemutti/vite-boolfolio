@@ -227,6 +227,33 @@
 			background-position: center;
 			background-size: cover;
 			opacity: 60%;
+			display: flex;
+
+			.efx_home {
+				height: 100%;
+				width: calc((100% / 12)*1);
+				background-color: red;
+				opacity: 0.5;
+				display: flex;
+			}
+
+			.efx_home:hover {
+				animation-name: efx_home;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+
+			}
+
+			@keyframes efx_home {
+				from {
+					opacity: 0.5;
+				}
+
+				to {
+					opacity: 0;
+				}
+			}
+
 		}
 
 		.box_top {

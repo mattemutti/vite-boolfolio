@@ -23,7 +23,24 @@ export default {
 <template>
 
 	<div class="bg_home">
+
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+		<div class="efx_home"></div>
+
 	</div>
+
+
+
 
 
 
