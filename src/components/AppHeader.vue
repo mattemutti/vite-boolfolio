@@ -16,10 +16,10 @@ export default {
           'text': 'Projects',
           'route': 'projects'
         },
-        {
+        /*{
           'text': 'Blog',
           'route': 'blog'
-        },
+        },*/
         {
           'text': 'Contacts',
           'route': 'contacts'
@@ -39,16 +39,18 @@ export default {
         <router-link :to="{ name: 'social' }" class="text-decoration-none txt_color fs-5">MM</router-link>
       </div>
       <div class="right-menu d-flex ">
-        <router-link :to="{ name: item.route }" v-for="item in    menu    " class="px-2 text-decoration-none txt_color">
+        <router-link :to="{ name: item.route }" v-for="item in menu" class="px-2 text-decoration-none txt_color">
           <div>
             {{ item.text }}
-            <div class="line_header" :class="{ 'active_menu': this.$route.path == '/' + item.route }"></div>
+            <div v-if="this.$route.path === '/' + item.route || this.$route.path === '/'">
+              <div class="line_header active_menu"></div>
+            </div>
           </div>
-
         </router-link>
-
       </div>
     </div>
+
+
   </header>
 
 </template>
