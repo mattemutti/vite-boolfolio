@@ -8,8 +8,50 @@
 	font-style: normal;
 	font-variation-settings: "SEIS" 0, "wght" 300;
 	color: var(--text--primary);
-	cursor: nw-resize;
+	//cursor: nw-resize;
+	cursor: none;
 }
+
+#cursor {
+	aspect-ratio: 1;
+	border-radius: 50%;
+	width: 0.5rem;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	z-index: 50;
+	// top: 150px;
+	// left: 270px;
+	mix-blend-mode: difference;
+	pointer-events: none;
+}
+
+#cursor-shadow {
+	aspect-ratio: 1;
+	border-radius: 50%;
+	width: 2rem;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	border: 1px solid white;
+	z-index: 50;
+	top: 150px;
+	left: 270px;
+	mix-blend-mode: difference;
+	pointer-events: none;
+}
+
+#cursor-shadow.hover {
+	background-color: #dc3545;
+	border-color: #dc3545;
+	width: 2rem;
+}
+
+#cursor.hover {
+	background-color: #dc3545;
+	border-color: #dc3545;
+	width: 1rem;
+}
+
 
 ::-webkit-scrollbar {
 	display: none;
@@ -270,7 +312,7 @@
 			color: rgb(49, 48, 48);
 		}
 
-		.input_box { 
+		.input_box {
 			color: var(--text--primary);
 			background-color: var(--bg-primary);
 			border-radius: 0.2rem;
