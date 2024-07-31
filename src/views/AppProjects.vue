@@ -62,22 +62,17 @@ export default {
 </script>
 <template>
 	<div class="container">
-
-
-
 		<div class="row" v-if="!loading">
 			<ProjectCard v-for="project in  projects.data" :project="project" :key="project.id"
 				:base_api_url="base_api_url">
 
 			</ProjectCard>
-
 		</div>
 		<div class=" row" v-else>
 			<div class="col">
 				Loading...
 			</div>
 		</div>
-
 
 		<!-- Paginate -->
 		<nav aria-label="Page navigation">

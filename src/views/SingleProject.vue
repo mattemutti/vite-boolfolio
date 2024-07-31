@@ -51,10 +51,6 @@ export default {
 <template>
 
 	<div>
-		<!-- The current route is accessible as $route in the template -->
-		<!-- {{ $route.params.id }} -->
-
-
 		<div class="text-center">
 			<h2 class="">{{ project.title }}</h2>
 		</div>

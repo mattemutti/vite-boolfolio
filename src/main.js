@@ -5,6 +5,8 @@ import router from './router.js'
 
 createApp(App).use(router).mount('#app')
 
+
+// Cursor
 const cursor = document.getElementById('cursor')
 const shadow = document.getElementById('cursor-shadow')
 const links = document.querySelectorAll('a')
